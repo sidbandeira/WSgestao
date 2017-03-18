@@ -39,13 +39,13 @@ border-left:10px solid #FFD39B;
     <body>
         <h1>Importação de arquivos</h1>
         <ul id="menu">
-            <li><a href="BuscarArquivoEmpresa.php"> Empresas</a></li>
-            <li><a href="BuscarArquivoFornecedor.php"> Fornecedores</a></li>
-            <li><a href="BuscarArquivoProduto.php"> Produto</a></li>
+            <li><a href="BuscarArquivoEmpresa.php"> Cadastro Empresas</a></li>
+            <li><a href="BuscarArquivoFornecedor.php"> Cadastro Fornecedores</a></li>
+            <li><a href="BuscarArquivoProduto.php"> Cadastro Produto</a></li>
             <li><a href="BuscarArquivoFornecedorProduto.php">Fornecedor/Produto</a></li>
-            <li><a href="BuscarArquivoTanque.php"> Tanque</a></li>
-            <li><a href="BuscarArquivoUsuario.php"> Usuário</a></li>
-            <li><a href="Retorno/CarregaMenu.php"> Lista Menus</a></li>
+            <li><a href="BuscarArquivoTanque.php"> Cadastro Tanque</a></li>
+            <li><a href="BuscarArquivoUsuario.php"> Cadastro Usuário</a></li>
+            <li><a href="#"> ##</a></li>
         </ul>
     </body>
 </html>
