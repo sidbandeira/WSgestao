@@ -1,14 +1,14 @@
 <?php
 
-//$servername = "mysql.hostinger.com.br";
-//$username = "u655756784_sid";
-//$password = "021082";
-//$dbname = "u655756784_temp";
+$servername = "mysql.hostinger.com.br";
+$username = "u655756784_sid";
+$password = "021082";
+$dbname = "u655756784_temp";
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "dbgestao";
+//$servername = "localhost";
+//$username = "root";
+//$password = "";
+//$dbname = "dbgestao";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -25,16 +25,37 @@ $senha = htmlspecialchars($_GET["senha"]);
 
 //$senha = md5($senha1);
 
-$sql = "SELECT * FROM usuario where emailusuario='$email' and senhausuario='$senha'";
+//$sql = "SELECT * FROM usuario where emailusuario='$email' and senhausuario='$senha'";
+$sql = "SELECT * FROM usuario "
+        . "LEFT JOIN empresa USING(CodEmpresa)"
+        . "LEFT JOIN menu USING(Codempresa)"
+        . "where emailusuario='$email' and senhausuario='$senha'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    // output data of each row
+    
+//    while ($row = $result->fetch_assoc()) {
+//        $codempresa = $row["codempresa"];
+//        $menudescricao = $row["menudescricao"];
+//        $liberado = $row["menuliberado"];
+//        
+//        $linha []= "codempresa:$codempresa,menu:$menudescricao, liberado:$liberado";
+//        
+//    $unidade["codempresa"]= $linha;
+//    }
+    
+    while ($row = $result->fetch_assoc()) {
+        
+        $linha = array("codempresa" => $row["codempresa"], 
+                          "menu" => $row["menudescricao"],
+                        "liberado"=> $row["menuliberado"]);
+        $unidade['menu'][] = $linha;
+    }
+    
     $row = $result->fetch_assoc();
     $codEmpresa = $row["codempresa"];
     
-    $dataRet = array("wsCodempresa"=>$codEmpresa,
-                        "wsMsg"=>utf8_encode("Ok!"));
+    $dataRet = $unidade;
 
 } else {
     $dataRet = array("wsCodempresa"=>0,
