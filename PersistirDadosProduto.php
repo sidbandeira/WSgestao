@@ -43,7 +43,7 @@ foreach ($xml as $produto){
          . "VALUES ('$descricao', $precovenda, $precocusto, $codintegracao, $codempresa)";
       
    }else{
-       $sql = "UPDATE produto SET produtodescricao = '$descricao', produtoprecovenda = $preco, produtoprecovenda = $precocusto"
+       $sql = "UPDATE produto SET produtodescricao = '$descricao', produtoprecovenda = $precovenda, produtoprecocusto = $precocusto"
                . " WHERE codintegracao =  $codintegracao and codempresa =  $codempresa";
    }
     $conn->query($sql);
