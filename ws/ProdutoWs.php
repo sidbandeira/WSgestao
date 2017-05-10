@@ -23,7 +23,8 @@ $qryLista = mysqli_query($conn, "SELECT * FROM produto"
     ." INNER JOIN empresa USING(CodEmpresa)" 
     ." INNER JOIN produtofornecedor USING(idproduto)"
     ." INNER JOIN fornecedor USING(idfornecedor)"
-    ." WHERE empresa.codempresa = $codEmpresa");
+    ." WHERE empresa.codempresa = $codEmpresa "
+        . "ORDER BY idproduto");
 if ($qryLista->num_rows > 0) {
 
     while ($row = $qryLista->fetch_assoc()) {
