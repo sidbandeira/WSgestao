@@ -7,15 +7,15 @@
 </html>
 
 <?php
-//$servername = "mysql.hostinger.com.br";
-//$username = "u655756784_sid";
-//$password = "021082";
-//$dbname = "u655756784_temp";
+$servername = "mysql.hostinger.com.br";
+$username = "u655756784_sid";
+$password = "021082";
+$dbname = "u655756784_temp";
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "dbgestao";
+//$servername = "localhost";
+//$username = "root";
+//$password = "";
+//$dbname = "dbgestao";
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
@@ -30,16 +30,16 @@ $_FILES['arquivo']['name'];
 $xml = simplexml_load_file($_FILES['arquivo']['tmp_name']);
  
 /* Percorre o objeto e imprime na tela as informações de cada contato */
-foreach ($xml as $produto){
-   $codintegracaoproduto = (int)$produto->codintegracaoproduto;
-   $codintegracaofornecedor = (int)$produto->codintegracaofornecedor;
-   $codempresa = (int)$produto->codempresa;
+foreach ($xml as $produtofornecedor){
+   $codintegracaoproduto = (int)$produtofornecedor->codintegracaoproduto;
+   $codintegracaofornecedor = (int)$produtofornecedor->codintegracaofornecedor;
+   $codempresa = (int)$produtofornecedor->codempresa;
       
    //if ($tiporegistro == 0) {
        $sql = "INSERT INTO produtofornecedor (idproduto,idfornecedor, codempresa)"
                ."SELECT idproduto,idfornecedor , $codempresa"
                ." FROM(SELECT  idproduto"
-                    ." FROM PRODUTO WHERE CodIntegracao = $codintegracaoproduto ) AS CONSULTA1"
+                    ." FROM produto WHERE CodIntegracao = $codintegracaoproduto ) AS CONSULTA1"
                ." CROSS JOIN"
                     ." (SELECT idfornecedor"
                     ." FROM fornecedor WHERE CodIntegracao = $codintegracaofornecedor ) AS CONSULTA2 ";           
