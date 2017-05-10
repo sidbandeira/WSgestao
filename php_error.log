@@ -1,0 +1,20 @@
+[09-Mar-2017 10:45:40 UTC] PHP Warning:  simplexml_load_file(): /tmp/php3PVhyY:6: parser error : Opening and ending tag mismatch: codlintegracao line 6 and codintegracao in /home/u655756784/public_html/PersistirDadosProduto.php on line 25
+[09-Mar-2017 10:45:40 UTC] PHP Warning:  simplexml_load_file(): 		&lt;codlintegracao&gt;106&lt;/codintegracao&gt; in /home/u655756784/public_html/PersistirDadosProduto.php on line 25
+[09-Mar-2017 10:45:40 UTC] PHP Warning:  simplexml_load_file(): 		                                   ^ in /home/u655756784/public_html/PersistirDadosProduto.php on line 25
+[09-Mar-2017 10:45:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/u655756784/public_html/PersistirDadosProduto.php on line 28
+[10-Mar-2017 23:37:44 UTC] PHP Warning:  require(Slim/Slim.php): failed to open stream: No such file or directory in /home/u655756784/public_html/wsTanque.php on line 6
+[10-Mar-2017 23:37:44 UTC] PHP Fatal error:  require(): Failed opening required 'Slim/Slim.php' (include_path='.:/opt/php-5.6/pear') in /home/u655756784/public_html/wsTanque.php on line 6
+[11-Mar-2017 01:59:00 UTC] PHP Warning:  require(Slim/Slim.php): failed to open stream: No such file or directory in /home/u655756784/public_html/wsTanque.php on line 6
+[11-Mar-2017 01:59:00 UTC] PHP Fatal error:  require(): Failed opening required 'Slim/Slim.php' (include_path='.:/opt/php-5.6/pear') in /home/u655756784/public_html/wsTanque.php on line 6
+[11-Mar-2017 02:07:08 UTC] PHP Warning:  require(Slim/Slim.php): failed to open stream: No such file or directory in /home/u655756784/public_html/wsTanque.php on line 6
+[11-Mar-2017 02:07:08 UTC] PHP Fatal error:  require(): Failed opening required 'Slim/Slim.php' (include_path='.:/opt/php-5.6/pear') in /home/u655756784/public_html/wsTanque.php on line 6
+[11-Mar-2017 02:15:26 UTC] PHP Warning:  require(Slim/Slim.php): failed to open stream: No such file or directory in /home/u655756784/public_html/wsTanque.php on line 6
+[11-Mar-2017 02:15:26 UTC] PHP Fatal error:  require(): Failed opening required 'Slim/Slim.php' (include_path='.:/opt/php-5.6/pear') in /home/u655756784/public_html/wsTanque.php on line 6
+[11-Mar-2017 02:48:24 UTC] PHP Warning:  require(Slim/Slim.php): failed to open stream: No such file or directory in /home/u655756784/public_html/wsTanque.php on line 6
+[11-Mar-2017 02:48:24 UTC] PHP Fatal error:  require(): Failed opening required 'Slim/Slim.php' (include_path='.:/opt/php-5.6/pear') in /home/u655756784/public_html/wsTanque.php on line 6
+[13-Mar-2017 00:12:31 UTC] PHP Warning:  require(Slim/Slim.php): failed to open stream: No such file or directory in /home/u655756784/public_html/wsTanque.php on line 6
+[13-Mar-2017 00:12:31 UTC] PHP Fatal error:  require(): Failed opening required 'Slim/Slim.php' (include_path='.:/opt/php-5.6/pear') in /home/u655756784/public_html/wsTanque.php on line 6
+[13-Mar-2017 03:00:42 UTC] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'10.1.2.60' (using password: NO) in /home/u655756784/public_html/LoginWs.php on line 8
+[13-Mar-2017 03:22:42 UTC] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'10.1.2.60' (using password: NO) in /home/u655756784/public_html/LoginWs.php on line 14
+[13-Mar-2017 03:22:53 UTC] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'10.1.2.60' (using password: NO) in /home/u655756784/public_html/LoginWs.php on line 14
+[13-Mar-2017 03:36:30 UTC] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'10.1.2.60' (using password: NO) in /home/u655756784/public_html/LoginWs.php on line 14
