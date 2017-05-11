@@ -33,6 +33,7 @@ if ($qryLista->num_rows > 0) {
         $new_date = Date_format($old_date, "d/m/Y");
         
         $linha = array("idproduto" => $row["idproduto"], 
+                        "produtocodbarras" => $row["produtocodbarras"],
                         "produtodescricao" => $row["produtodescricao"],
                         "produtoprecovenda" => $row["produtoprecovenda"],
                         "produtoprecocusto" => $row["produtoprecocusto"],
