@@ -37,7 +37,8 @@ if ($qryLista->num_rows > 0) {
                         "produtodescricao" => $row["produtodescricao"],
                         "produtoprecovenda" => $row["produtoprecovenda"],
                         "produtoprecocusto" => $row["produtoprecocusto"],
-                        "produtodtultimacompra" =>  $new_date
+                        "produtodtultimacompra" =>  $new_date,
+                        "produtosaldo" => $row["produtosaldo"]
             );
         $produto['produtos'][] = $linha;
     }

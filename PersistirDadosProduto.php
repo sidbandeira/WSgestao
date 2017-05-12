@@ -39,14 +39,17 @@ foreach ($xml as $produto){
    $codintegracao = (int)$produto->codintegracao;
    $codempresa = (int)$produto->codempresa;
    $tiporegistro = (int) $produto->tiporegistro;
+   $saldo= (float) $produto->produtosaldo;
    
    if ($tiporegistro == 0) {
-       $sql = "INSERT INTO produto (produtocodbarras,produtodescricao, produtoprecovenda,produtoprecocusto,produtodtultimacompra,codintegracao, codempresa) "
-         . "VALUES ('$codbarras','$descricao', $precovenda, $precocusto, '$dtultimacompra', $codintegracao, $codempresa)";
+       $sql = "INSERT INTO produto (produtocodbarras,produtodescricao, produtoprecovenda,produtoprecocusto,"
+               . "produtodtultimacompra,codintegracao, codempresa, produtosaldo)"
+               . "VALUES ('$codbarras','$descricao', $precovenda, $precocusto, '$dtultimacompra',"
+               . " $codintegracao, $codempresa, $saldo)";
       
    }else{
        $sql = "UPDATE produto SET produtocodbarras = '$codbarras', produtodescricao = '$descricao', produtoprecovenda = $precovenda, produtoprecocusto = $precocusto,"
-               . " produtodtultimacompra = '$dtultimacompra'"
+               . " produtodtultimacompra = '$dtultimacompra', produtosaldo = $saldo"
                . " WHERE codintegracao =  $codintegracao and codempresa =  $codempresa";
    }
     $conn->query($sql);
