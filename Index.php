@@ -45,6 +45,7 @@ border-left:10px solid #FFD39B;
             <li><a href="BuscarArquivoFornecedorProduto.php">Fornecedor/Produto</a></li>
             <li><a href="BuscarArquivoTanque.php"> Cadastro Tanque</a></li>
             <li><a href="BuscarArquivoUsuario.php"> Cadastro Usuário</a></li>
+            <li><a href="BuscarArquivoVenda.php"> Cadastro Vendas</a></li>
             <li><a href="#"> ##</a></li>
         </ul>
     </body>
