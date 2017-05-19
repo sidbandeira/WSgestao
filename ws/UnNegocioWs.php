@@ -19,14 +19,14 @@ if (mysqli_connect_errno()) {
 $codEmpresa = htmlspecialchars($_GET["codempresa"]);
 
 //Consultando banco de dados
-$qryLista = mysqli_query($conn, "SELECT idunidade, razaosocialunidade "
+$qryLista = mysqli_query($conn, "SELECT codunidade, razaosocialunidade "
         . "FROM unidadenegocio "
         . "WHERE codempresa = $codEmpresa");
 if ($qryLista->num_rows > 0) {
 
     while ($row = $qryLista->fetch_assoc()) {
         
-        $linha = array("id" => $row["idunidade"], 
+        $linha = array("codunidade" => $row["codunidade"], 
                           "razaosocial" => $row["razaosocialunidade"]);
         $unidade['unidades'][] = $linha;
     }
